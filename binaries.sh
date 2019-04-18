@@ -21,7 +21,7 @@ rm win-x64.zip
 
 echo 'windows ia32'
 echo '  downloading from ffmpeg.zeranoe.com'
-download 'https://ffmpeg.zeranoe.com/builds/win/static/ffmpeg-latest-win-static.zip' win-ia32.zip
+download 'https://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-latest-win32-static.zip' win-ia32.zip
 echo '  extracting'
 unzip -o -d ./bin/win/ia32 -j win-ia32.zip '**/ffmpeg.exe'
 echo ' cleaning up'

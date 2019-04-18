@@ -2,18 +2,18 @@
 
 [travis-image]: https://travis-ci.org/Kamicast/ffmpeg-bin-electron.svg?branch=master
 [travis-url]: https://travis-ci.org/Kamicast/ffmpeg-bin-electron
-[npm-image]: https://img.shields.io/npm/v/Kamicast/ffmpeg-bin-electron.svg
-[npm-url]: https://npmjs.org/package/Kamicast/ffmpeg-bin-electron
-[downloads-image]: https://img.shields.io/npm/dm/Kamicast/ffmpeg-bin-electron.svg
-[downloads-url]: https://npmjs.org/package/Kamicast/ffmpeg-bin-electron
+[npm-image]: https://img.shields.io/npm/v/oconnorct1/ffmpeg-bin-electron.svg
+[npm-url]: https://npmjs.org/package/oconnorct1/ffmpeg-bin-electron
+[downloads-image]: https://img.shields.io/npm/dm/oconnorct1/ffmpeg-bin-electron.svg
+[downloads-url]: https://npmjs.org/package/oconnorct1/ffmpeg-bin-electron
 
 ## About
 
-This is a modified module from [here](https://github.com/eugeneware/ffmpeg-static)
+This is a modified module from [here](https://github.com/eugeneware/ffmpeg-bin-electron)
 
 **[ffmpeg](https://ffmpeg.org) static binaries for Mac OSX, Linux, and Windows.**
 
-*Note:* The version of `ffmpeg-static` follows [SemVer](http://semver.org). When releasing new versions, **we do *not* consider breaking changes in `ffmpeg` itself**, but only the JS interface (see below). To stop `ffmpeg-static` from breaking your code by getting updated, [lock the version down](https://docs.npmjs.com/files/package.json#dependencies) or use a [lockfile](https://docs.npmjs.com/files/package-lock.json).
+*Note:* This version of `ffmpeg-bin-electron` follows [SemVer](http://semver.org). When releasing new versions, **we do *not* consider breaking changes in `ffmpeg` itself**, but only the JS interface (see below). To stop `ffmpeg-bin-electron` from breaking your code by getting updated, [lock the version down](https://docs.npmjs.com/files/package.json#dependencies) or use a [lockfile](https://docs.npmjs.com/files/package-lock.json).
 
 
 ## Developer
@@ -35,13 +35,13 @@ yarn add ffmpeg-bin-electron
 ## How to use
 ```js
 // ES6
-import ffmpeg from 'ffmpeg-static';
+import ffmpeg from 'ffmpeg-bin-electron';
 // ES5
-const ffmpeg = require('ffmpeg-static').default;
+const ffmpeg = require('ffmpeg-bin-electron').default;
 
 
 console.log(ffmpeg.path);
-// /Users/craigoconnor/Projects/ffmpeg-test/ffmpeg-static/bin/darwin/x64/ffmpeg
+// /Users/craigoconnor/Projects/ffmpeg-test/ffmpeg-bin-electron/bin/darwin/x64/ffmpeg
 ```
 
 

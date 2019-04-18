@@ -1,4 +1,8 @@
 .DS_Store
 node_modules
 lib
-bin/*
+bin/linux/ia32/ffmpeg
+bin/linux/x64/ffmpeg
+bin/mac/x64/ffmpeg
+bin/win/ia32/ffmpeg.exe
+bin/win/x64/ffmpeg.exe

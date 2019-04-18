@@ -1,6 +1,6 @@
 {
   "name": "ffmpeg-bin-electron",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Static ffmpeg binaries for use with electron on Mac OSX, Linux, and Windows",
   "main": "lib/index.js",
   "files": [
