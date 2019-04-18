@@ -1,7 +1,9 @@
-const test = require('tape');
+const test = require('tape')
+const fs = require('fs')
+const ffmpeg = require('../lib').default
 
-test('timing test', function (t) {
-    t.plan(1);
+test('should find ffmpeg', function (t) {
+  t.plan(1)
 
-    t.equal(typeof Date.now, 'function');
-});
+  t.ok(fs.existsSync(ffmpeg))
+})

@@ -1,25 +1,67 @@
-# skeleton-module [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![Greenkeeper badge](https://badges.greenkeeper.io/IFTT/skeleton-module.svg)](https://greenkeeper.io/)
+# ffmpeg-bin-electron [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-[travis-image]: https://travis-ci.org/IFTT/skeleton-module.svg?branch=master
-[travis-url]: https://travis-ci.org/IFTT/skeleton-module
-[npm-image]: https://img.shields.io/npm/v/@iftt/skeleton-module.svg
-[npm-url]: https://npmjs.org/package/@iftt/skeleton-module
-[downloads-image]: https://img.shields.io/npm/dm/@iftt/skeleton-module.svg
-[downloads-url]: https://npmjs.org/package/@iftt/skeleton-module
+[travis-image]: https://travis-ci.org/Kamicast/ffmpeg-bin-electron.svg?branch=master
+[travis-url]: https://travis-ci.org/Kamicast/ffmpeg-bin-electron
+[npm-image]: https://img.shields.io/npm/v/Kamicast/ffmpeg-bin-electron.svg
+[npm-url]: https://npmjs.org/package/Kamicast/ffmpeg-bin-electron
+[downloads-image]: https://img.shields.io/npm/dm/Kamicast/ffmpeg-bin-electron.svg
+[downloads-url]: https://npmjs.org/package/Kamicast/ffmpeg-bin-electron
 
 ## About
 
-**Create new modules with this skeleton**
+This is a modified module from [here](https://github.com/eugeneware/ffmpeg-static)
 
-`git clone https://github.com/IFTT/skeleton-module.git`
+**[ffmpeg](https://ffmpeg.org) static binaries for Mac OSX, Linux, and Windows.**
 
-`git remote rm origin`
+*Note:* The version of `ffmpeg-static` follows [SemVer](http://semver.org). When releasing new versions, **we do *not* consider breaking changes in `ffmpeg` itself**, but only the JS interface (see below). To stop `ffmpeg-static` from breaking your code by getting updated, [lock the version down](https://docs.npmjs.com/files/package.json#dependencies) or use a [lockfile](https://docs.npmjs.com/files/package-lock.json).
+
+
+## Developer
+In order to download and prep the binaries you *may* need to change permissions for the shell script:
+
+```sh
+chmod +x binaries.sh
+```
+
+To run the script either execute `sudo ./binaries.sh` or `sudo yarn run build-bin`
+
+## Install
+```sh
+npm install --save ffmpeg-bin-electron
+# or
+yarn add ffmpeg-bin-electron
+```
+
+## How to use
+```js
+// ES6
+import ffmpeg from 'ffmpeg-static';
+// ES5
+const ffmpeg = require('ffmpeg-static').default;
+
+
+console.log(ffmpeg.path);
+// /Users/craigoconnor/Projects/ffmpeg-test/ffmpeg-static/bin/darwin/x64/ffmpeg
+```
+
+
+## The binaries sources
+
+[The build script](build/index.sh) downloads binaries from these locations:
+
+- [Windows builds](https://ffmpeg.zeranoe.com/builds/win64/static/)
+- [Linux builds](https://johnvansickle.com/ffmpeg/)
+- [macOS builds](https://evermeet.cx/pub/ffmpeg/)
+
+## Building the project
+
+The `unzip`, `tar` and `7zr` CLI executables need to be installed. On macOS, use `brew install p7zip gnu-tar xz`.
 
 ---
 
 ## ISC License (ISC)
 
-Copyright 2019 <IFTT>
+Copyright 2019 <Kamicast>
 Copyright (c) 2004-2010 by Internet Systems Consortium, Inc. ("ISC")
 Copyright (c) 1995-2003 by Internet Software Consortium
 
