@@ -1,6 +1,6 @@
 {
   "name": "ffmpeg-bin-electron",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Static ffmpeg binaries for use with electron on Mac OSX, Linux, and Windows",
   "main": "lib/index.js",
   "files": [
@@ -11,7 +11,7 @@
     "lint+build+test": "yarn run lint && yarn run build && yarn run test",
     "lint": "echo linting... && standard ./src/**/*.js && echo 'successfully linted'",
     "build": "echo building... && babel src/ -d lib/ && echo 'successfully built'",
-    "build-bin": "./binaries.sh",
+    "build-bin": "node getBinaries.js",
     "prepublish": "yarn run build",
     "test": "echo running server tests... && standard && tape test/**/*.js | tap-summary && echo 'successfully completed tests'"
   },
@@ -31,10 +31,13 @@
     "@babel/plugin-syntax-flow": "^7.2.0",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-flow": "^7.0.0",
+    "async-waterfall": "^0.1.5",
     "babel-eslint": "^10.0.1",
+    "chalk": "^2.4.2",
     "core-js": "3",
     "eslint": "^5.16.0",
     "eslint-plugin-flowtype": "^3.6.1",
+    "ffbinaries": "^1.1.1",
     "flow-bin": "^0.97.0",
     "standard": "*",
     "tape": "^4.10.1",

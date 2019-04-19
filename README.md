@@ -35,27 +35,18 @@ yarn add ffmpeg-bin-electron
 ## How to use
 ```js
 // ES6
-import ffmpeg from 'ffmpeg-bin-electron';
+import ffmpegPath from 'ffmpeg-bin-electron';
 // ES5
-const ffmpeg = require('ffmpeg-bin-electron').default;
+const ffmpegPath = require('ffmpeg-bin-electron').default;
 
 
-console.log(ffmpeg.path);
+console.log(ffmpegPath);
 // /Users/craigoconnor/Projects/ffmpeg-test/ffmpeg-bin-electron/bin/darwin/x64/ffmpeg
 ```
 
 
 ## The binaries sources
-
-[The build script](build/index.sh) downloads binaries from these locations:
-
-- [Windows builds](https://ffmpeg.zeranoe.com/builds/win64/static/)
-- [Linux builds](https://johnvansickle.com/ffmpeg/)
-- [macOS builds](https://evermeet.cx/pub/ffmpeg/)
-
-## Building the project
-
-The `unzip`, `tar` and `7zr` CLI executables need to be installed. On macOS, use `brew install p7zip gnu-tar xz`.
+All binaries came from [here](https://ffbinaries.com)
 
 ---
 
